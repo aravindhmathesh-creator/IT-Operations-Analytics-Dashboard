@@ -20,7 +20,7 @@ The solution simulates a real-world enterprise IT operations reporting system.
 ![Agent Performance](images/agent_performance.png)
 
 ### Drill-Through Diagnostics
-![Drill Through](images/drillthrough.png)
+![Drill Through Diagnostics](images/drillthrough_diagnostics.png)
 
 
 ---
