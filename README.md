@@ -123,13 +123,5 @@ Agent performance benchmarking
 Root cause ticket analysis
 
 Data-driven IT operations management
-
-📂 Repository Structure
-/pbix
-  IT_Operations_Dashboard.pbix
-
-/sql
-  create_table.sql
-
 /dataset
   sample_tickets.csv
