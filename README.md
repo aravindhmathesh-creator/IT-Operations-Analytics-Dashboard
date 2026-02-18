@@ -1,11 +1,11 @@
-🚀 IT Operations Analytics Dashboard
-📌 Overview
+##🚀 IT Operations Analytics Dashboard
+##📌 Overview
 
 This project demonstrates a multi-page Power BI analytics solution designed to monitor IT service performance, SLA compliance, and agent efficiency using a dataset of 30,000+ service tickets.
 
 The solution simulates a real-world enterprise IT operations reporting system.
 
-🎯 Business Objective
+##🎯 Business Objective
 
 Provide leadership and operations teams with:
 
@@ -53,8 +53,8 @@ MySQL (Data storage & import)
 
 SQL
 
-📊 Dashboard Pages
-1️⃣ Executive Dashboard
+##📊 Dashboard Pages
+##1️⃣ Executive Dashboard
 
 High-level KPIs:
 
@@ -70,7 +70,7 @@ Avg CSAT
 
 Includes monthly trends and priority distribution.
 
-2️⃣ SLA Deep Dive
+##2️⃣ SLA Deep Dive
 
 SLA Breach % by Month
 
@@ -80,7 +80,7 @@ MTTR vs SLA Target (conditional formatting)
 
 Variance-based risk highlighting
 
-3️⃣ Agent Performance
+##3️⃣ Agent Performance
 
 Top 10 agents by ticket volume
 
@@ -88,7 +88,7 @@ SLA Breach % with risk color coding
 
 MTTR vs CSAT quadrant analysis
 
-4️⃣ Drill-Through Diagnostics
+##4️⃣ Drill-Through Diagnostics
 
 Dynamic agent-level KPI recalculation
 
@@ -98,7 +98,7 @@ Reopen rate analysis
 
 SLA breach highlighting
 
-🧠 Key DAX Highlights
+## 🧠 Key DAX Highlights
 
 CALCULATE() with filter context
 
@@ -112,7 +112,7 @@ Variance modeling
 
 Performance classification logic
 
-📈 Business Value
+##📈 Business Value
 
 This dashboard enables:
 
@@ -123,5 +123,3 @@ Agent performance benchmarking
 Root cause ticket analysis
 
 Data-driven IT operations management
-/dataset
-  sample_tickets.csv
