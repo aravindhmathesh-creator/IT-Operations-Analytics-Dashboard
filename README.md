@@ -129,3 +129,10 @@ This dashboard enables:
 
 ## 📂 Repository Structure
 
+dataset/sample_tickets.csv
+
+dataset/sample_tickets.csv
+
+sql/create_table.sql
+
+
