@@ -129,10 +129,20 @@ This dashboard enables:
 
 ## 📂 Repository Structure
 
-dataset/sample_tickets.csv
+## 📂 Repository Structure
 
-dataset/sample_tickets.csv
-
-sql/create_table.sql
-
+```
+IT-Operations-Analytics-Dashboard
+│
+├── dataset/
+│   └── sample_tickets.csv
+│
+├── sql/
+│   └── create_table.sql
+│
+├── pbix/
+│   └── IT_Operations_Dashboard.pbix
+│
+└── README.md
+```
 
