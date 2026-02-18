@@ -8,6 +8,23 @@ The solution simulates a real-world enterprise IT operations reporting system.
 
 ---
 
+## 📸 Dashboard Preview
+
+### Executive Dashboard
+![Executive Dashboard](images/executive_dashboard.png)
+
+### SLA Deep Dive
+![SLA Deep Dive](images/sla_deep_dive.png)
+
+### Agent Performance
+![Agent Performance](images/agent_performance.png)
+
+### Drill-Through Diagnostics
+![Drill Through](images/drillthrough.png)
+
+
+---
+
 ## 🎯 Business Objective
 
 Provide leadership and operations teams with:
