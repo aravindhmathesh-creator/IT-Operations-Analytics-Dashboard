@@ -129,8 +129,6 @@ This dashboard enables:
 
 ## 📂 Repository Structure
 
-## 📂 Repository Structure
-
 ```
 IT-Operations-Analytics-Dashboard
 │
