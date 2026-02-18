@@ -1,2 +1,135 @@
-# IT-Operations-Analytics-Dashboard
-A multi-page Power BI analytics solution designed to monitor IT service health, SLA compliance, and agent performance across 30,000+ historical ticket records.
+🚀 IT Operations Analytics Dashboard
+📌 Overview
+
+This project demonstrates a multi-page Power BI analytics solution designed to monitor IT service performance, SLA compliance, and agent efficiency using a dataset of 30,000+ service tickets.
+
+The solution simulates a real-world enterprise IT operations reporting system.
+
+🎯 Business Objective
+
+Provide leadership and operations teams with:
+
+Real-time SLA compliance monitoring
+
+MTTR and resolution efficiency tracking
+
+Agent-level performance diagnostics
+
+Root cause drill-through investigation
+
+🧱 Data Model
+
+Dataset contains:
+
+Ticket_ID
+
+Created_Date
+
+Resolved_Date
+
+Priority (P1–P4)
+
+Category
+
+Assignment_Group
+
+Agent_Name
+
+Resolution_Time_Minutes
+
+SLA_Breach
+
+CSAT_Score
+
+Reopen_Count
+
+🛠 Tech Stack
+
+Power BI Desktop
+
+DAX (Advanced KPI modeling)
+
+MySQL (Data storage & import)
+
+SQL
+
+📊 Dashboard Pages
+1️⃣ Executive Dashboard
+
+High-level KPIs:
+
+Total Tickets
+
+Open Tickets
+
+SLA Breach %
+
+Avg Resolution Time
+
+Avg CSAT
+
+Includes monthly trends and priority distribution.
+
+2️⃣ SLA Deep Dive
+
+SLA Breach % by Month
+
+SLA Breach % by Assignment Group
+
+MTTR vs SLA Target (conditional formatting)
+
+Variance-based risk highlighting
+
+3️⃣ Agent Performance
+
+Top 10 agents by ticket volume
+
+SLA Breach % with risk color coding
+
+MTTR vs CSAT quadrant analysis
+
+4️⃣ Drill-Through Diagnostics
+
+Dynamic agent-level KPI recalculation
+
+Ticket-level inspection
+
+Reopen rate analysis
+
+SLA breach highlighting
+
+🧠 Key DAX Highlights
+
+CALCULATE() with filter context
+
+Time-intelligence calculations
+
+Dynamic SELECTEDVALUE() titles
+
+Conditional formatting using rules
+
+Variance modeling
+
+Performance classification logic
+
+📈 Business Value
+
+This dashboard enables:
+
+SLA risk detection
+
+Agent performance benchmarking
+
+Root cause ticket analysis
+
+Data-driven IT operations management
+
+📂 Repository Structure
+/pbix
+  IT_Operations_Dashboard.pbix
+
+/sql
+  create_table.sql
+
+/dataset
+  sample_tickets.csv
