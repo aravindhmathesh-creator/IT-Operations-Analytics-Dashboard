@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aravindh | Data & IT Analytics</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+.typing {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #3b82f6;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2563eb;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+    color: #94a3b8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    h1 { font-size: 30px; }
+    section { padding: 50px 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<header>
+<h1>Aravindh Matheswaran</h1>
+<p><span class="typing"></span></p>
+<a href="Aravindh_Matheswaran_Data_Analyst.pdf" class="btn" download>Download Resume</a>
+</header>
+
+<section>
+<h2>🚀 Featured Project</h2>
+<div class="card">
+<h3>IT Operations Analytics Dashboard</h3>
+<p>30,000+ ticket analysis using Power BI & DAX with SLA risk modeling, MTTR optimization, and agent performance segmentation.</p>
+<a href="case-study.html" class="btn">View Case Study</a>
+</div>
+</section>
+
+<section>
+<h2>📊 Other Projects</h2>
+<div class="projects">
+<div class="card">
+<h3>Customer Sales Analysis</h3>
+<p>SQL + Power BI revenue and churn analysis project.</p>
+</div>
+
+<div class="card">
+<h3>IPL Performance Analytics</h3>
+<p>Team strategy insights using historical match data.</p>
+</div>
+
+<div class="card">
+<h3>Service Desk KPI Tracker</h3>
+<p>Incident trend dashboard with MTTR & SLA analytics.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>📬 Contact</h2>
+<div class="card">
+<p>Email: aravindhmathesh@gmail.com</p>
+<p>LinkedIn: <a href="https://linkedin.com/in/aravindhmatheswaranl" target="_blank">LinkedIn Profile</a></p>
+<p>GitHub: <a href="https://github.com/aravindhmathesh-creator" target="_blank">GitHub Portfolio</a></p>
+</div>
+</section>
+
+<div class="footer">
+© 2025 Aravindh | Data & IT Analytics Portfolio
+</div>
+
+<script>
+// Typing Effect
+const roles = ["IT Operations Analyst", "Power BI Developer", "Data Analyst"];
+let i = 0, j = 0, current = "", isDeleting = false;
+function typeEffect(){
+    current = roles[i];
+    if(!isDeleting){
+        document.querySelector(".typing").textContent = current.slice(0, ++j);
+        if(j === current.length) isDeleting = true;
+    } else {
+        document.querySelector(".typing").textContent = current.slice(0, --j);
+        if(j === 0){
+            isDeleting = false;
+            i = (i + 1) % roles.length;
+        }
+    }
+    setTimeout(typeEffect, 120);
+}
+typeEffect();
+
+// Scroll Reveal
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll', ()=>{
+    cards.forEach(card=>{
+        const rect = card.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+            card.classList.add('show');
+        }
+    });
+});
+
+// Particle Background
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particlesArray = [];
+for(let i=0;i<80;i++){
+    particlesArray.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        size: Math.random()*2,
+        speedX: Math.random()-0.5,
+        speedY: Math.random()-0.5
+    });
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particlesArray.forEach(p=>{
+        p.x+=p.speedX;
+        p.y+=p.speedY;
+        ctx.fillStyle="#3b82f6";
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+        ctx.fill();
+    });
+    requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
 
